@@ -1,6 +1,6 @@
 ```
 # Trimming whitespace
-trim = import("text").trim;
+trim = text.trim;
 [
     "" | trim,
     "  " | trim,
@@ -14,7 +14,7 @@ trim = import("text").trim;
 
 ```
 # Converting to lowercase
-toLowerCase = import("text").toLowerCase;
+toLowerCase = text.toLowerCase;
 [
     "FOO" | toLowerCase,
     "foo" | toLowerCase,
@@ -25,7 +25,7 @@ toLowerCase = import("text").toLowerCase;
 
 ```
 # Converting to uppercase
-toUpperCase = import("text").toUpperCase;
+toUpperCase = text.toUpperCase;
 [
     "FOO" | toUpperCase,
     "foo" | toUpperCase,
