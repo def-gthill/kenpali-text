@@ -38,6 +38,82 @@ toUpperCase = text.toUpperCase;
 >> ["FOO", "FOO", "FOO42"]
 ```
 
+```
+# Starts with
+startsWith = text.startsWith;
+[
+    "foobar" | startsWith(""),
+    "foobar" | startsWith("f"),
+    "foobar" | startsWith("o"),
+    "foobar" | startsWith("foo"),
+    "foobar" | startsWith("fb"),
+]
+>> [
+    true,
+    true,
+    false,
+    true,
+    false,
+]
+```
+
+```
+# Remove prefix
+removePrefix = text.removePrefix;
+[
+    "foobar" | removePrefix(""),
+    "foobar" | removePrefix("f"),
+    "foobar" | removePrefix("o"),
+    "foobar" | removePrefix("foo"),
+    "foobar" | removePrefix("fb"),
+]
+>> [
+    "foobar",
+    "oobar",
+    "foobar",
+    "bar",
+    "foobar",
+]
+```
+
+```
+# Ends with
+endsWith = text.endsWith;
+[
+    "foobar" | endsWith(""),
+    "foobar" | endsWith("r"),
+    "foobar" | endsWith("a"),
+    "foobar" | endsWith("bar"),
+    "foobar" | endsWith("br"),
+]
+>> [
+    true,
+    true,
+    false,
+    true,
+    false,
+]
+```
+
+```
+# Remove suffix
+removeSuffix = text.removeSuffix;
+[
+    "foobar" | removeSuffix(""),
+    "foobar" | removeSuffix("r"),
+    "foobar" | removeSuffix("a"),
+    "foobar" | removeSuffix("bar"),
+    "foobar" | removeSuffix("br"),
+]
+>> [
+    "foobar",
+    "fooba",
+    "foobar",
+    "foo",
+    "foobar",
+]
+```
+
 ## Regexes
 
 ```
