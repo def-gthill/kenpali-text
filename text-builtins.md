@@ -141,3 +141,20 @@ r @ findAll:("foobarfr")
     {match: "fr", index: 7, numberedGroups: [null], namedGroups: {}}
 ]
 ```
+
+```
+# Matching an entire string to a regex
+r = text.regex("f(ai|ooba)r");
+[
+    r @ match:("x"),
+    r @ match:("fair"),
+    r @ match:("foobar"),
+    r @ match:("anafairafoobara"),
+]
+>> [
+    null,
+    {match: "fair", index: 1, numberedGroups: ["ai"], namedGroups: {}},
+    {match: "foobar", index: 1, numberedGroups: ["ooba"], namedGroups: {}},
+    null,
+]
+```
