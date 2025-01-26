@@ -120,8 +120,8 @@ removeSuffix = text.removeSuffix;
 # Finding all matches for a regex
 r = text.regex("f(ai|ooba)r");
 [
-    r @ findAll:("x"),
-    r @ findAll:("anafairafoobara"),
+    r.findAll("x"),
+    r.findAll("anafairafoobara"),
 ]
 >> [
     [],
@@ -135,7 +135,7 @@ r = text.regex("f(ai|ooba)r");
 ```
 # Unmatched groups returning null
 r = text.regex("f(ooba)?r");
-r @ findAll:("foobarfr")
+r.findAll("foobarfr")
 >> [
     {match: "foobar", index: 1, numberedGroups: ["ooba"], namedGroups: {}},
     {match: "fr", index: 7, numberedGroups: [null], namedGroups: {}}
@@ -146,10 +146,10 @@ r @ findAll:("foobarfr")
 # Matching an entire string to a regex
 r = text.regex("f(ai|ooba)r");
 [
-    r @ match:("x"),
-    r @ match:("fair"),
-    r @ match:("foobar"),
-    r @ match:("anafairafoobara"),
+    r.match("x"),
+    r.match("fair"),
+    r.match("foobar"),
+    r.match("anafairafoobara"),
 ]
 >> [
     null,
