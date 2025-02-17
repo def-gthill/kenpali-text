@@ -1,6 +1,6 @@
 # Kenpali Text Specification
 
-## Editing Strings
+## Editing Strings|editing
 
 ```
 # Trimming whitespace
@@ -114,7 +114,7 @@ removeSuffix = text.removeSuffix;
 ]
 ```
 
-## Regexes
+## Regular Expressions|regexes
 
 ```
 # Finding all matches for a regex
