@@ -16,7 +16,7 @@ Returns:
 
 ```
 # Trimming whitespace
-trim = text.trim;
+trim = text/trim;
 [
     "" | trim,
     "  " | trim,
@@ -43,7 +43,7 @@ Returns:
 
 ```
 # Converting to lowercase
-toLowerCase = text.toLowerCase;
+toLowerCase = text/toLowerCase;
 [
     "FOO" | toLowerCase,
     "foo" | toLowerCase,
@@ -66,7 +66,7 @@ Returns:
 
 ```
 # Converting to uppercase
-toUpperCase = text.toUpperCase;
+toUpperCase = text/toUpperCase;
 [
     "FOO" | toUpperCase,
     "foo" | toUpperCase,
@@ -90,7 +90,7 @@ Returns:
 
 ```
 # Starts with
-startsWith = text.startsWith;
+startsWith = text/startsWith;
 [
     "foobar" | startsWith(""),
     "foobar" | startsWith("f"),
@@ -122,7 +122,7 @@ Returns:
 
 ```
 # Remove prefix
-removePrefix = text.removePrefix;
+removePrefix = text/removePrefix;
 [
     "foobar" | removePrefix(""),
     "foobar" | removePrefix("f"),
@@ -154,7 +154,7 @@ Returns:
 
 ```
 # Ends with
-endsWith = text.endsWith;
+endsWith = text/endsWith;
 [
     "foobar" | endsWith(""),
     "foobar" | endsWith("r"),
@@ -186,7 +186,7 @@ Returns:
 
 ```
 # Remove suffix
-removeSuffix = text.removeSuffix;
+removeSuffix = text/removeSuffix;
 [
     "foobar" | removeSuffix(""),
     "foobar" | removeSuffix("r"),
@@ -238,7 +238,7 @@ Returns:
 
 ```
 # Finding all matches for a regex
-r = text.regex("f(ai|ooba)r");
+r = text/regex("f(ai|ooba)r");
 [
     r.findAll("x"),
     r.findAll("anafairafoobara"),
@@ -254,7 +254,7 @@ r = text.regex("f(ai|ooba)r");
 
 ```
 # Unmatched groups returning null
-r = text.regex("f(ooba)?r");
+r = text/regex("f(ooba)?r");
 r.findAll("foobarfr")
 >> [
     {match: "foobar", index: 1, numberedGroups: ["ooba"], namedGroups: {}},
@@ -276,7 +276,7 @@ Returns:
 
 ```
 # Matching an entire string to a regex
-r = text.regex("f(ai|ooba)r");
+r = text/regex("f(ai|ooba)r");
 [
     r.match("x"),
     r.match("fair"),
